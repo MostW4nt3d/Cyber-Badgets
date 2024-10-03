@@ -16,19 +16,22 @@
             overflow: hidden;
             color: #fff;
             font-family: 'Arial', sans-serif;
+            position: relative;
         }
 
         h1 {
-            font-size: 1.5em;
+            font-size: 1.2em;  /* Smaller text */
             margin-bottom: 20px;
+            padding: 10px; /* Added padding */
         }
 
         #badge-container {
             text-align: center;
         }
 
+        /* Button styling */
         .btn {
-            padding: 15px 30px;
+            padding: 10px 20px;  /* Smaller buttons */
             margin: 10px;
             font-size: 1em;
             color: white;
@@ -37,6 +40,8 @@
             border-radius: 5px;
             cursor: pointer;
             transition: 0.3s;
+            width: 150px;  /* Ensure buttons are same size */
+            text-align: center;
         }
 
         .btn:hover {
@@ -48,6 +53,7 @@
             transform: translateY(2px);
         }
 
+        /* Emoji container and background layer */
         #emoji-container {
             position: absolute;
             top: 0;
@@ -55,6 +61,7 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+            z-index: -1;  /* Emojis fall in the background */
         }
 
         .emoji {
@@ -77,14 +84,17 @@
 </head>
 <body>
 
+    <!-- Badge container with smaller header and more padding -->
     <div id="badge-container">
         <h1>My TryHackMe Badge</h1>
         <script src="https://tryhackme.com/badge/1294940"></script>
     </div>
 
+    <!-- Buttons with hover and redirect -->
     <button class="btn" onclick="window.location.href='https://t.me/Mostwantedalive'">Contact Me</button>
     <button class="btn" onclick="window.location.href='https://t.me/Israelihackers'">Join My Community</button>
 
+    <!-- Emoji container -->
     <div id="emoji-container"></div>
 
     <script>
